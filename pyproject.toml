@@ -1,0 +1,11 @@
+[project]
+name = "skyhelper-networth-tests"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp",
+    "skyhelper-networth",
+]
+
+[tool.uv.sources]
+skyhelper-networth = { path = "../SkyHelper-Networth-Python", editable = true }
