@@ -369,7 +369,7 @@ wheels = [
 
 [[package]]
 name = "skyhelper-networth"
-version = "0.0.1b1"
+version = "0.0.2b0"
 source = { editable = "../SkyHelper-Networth-Python" }
 dependencies = [
     { name = "aiohttp" },
@@ -388,7 +388,7 @@ requires-dist = [
 dev = [
     { name = "prek", specifier = "~=0.4" },
     { name = "ruff", specifier = "==0.16.1" },
-    { name = "ty", specifier = "==0.0.63" },
+    { name = "ty", specifier = "==0.0.65" },
 ]
 
 [[package]]
