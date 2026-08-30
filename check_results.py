@@ -24,9 +24,8 @@ def main() -> int:
 
         output_table += f"|{file.stem}|{python_calc['networth']}|{node_calc['networth']}|{python_calc['unsoulbound']}|{node_calc['unsoulboundNetworth']}|{'✅' if same_result else '❌'}|\n"
     print(output_table)
-    if os.getenv("GITHUB_ACTIONS"):
-        print(os.getenv("GITHUB_ACTIONS"))
-        os.putenv("GITHUB_STEP_SUMMARY", output_table)
+    if summary_path := os.getenv("GITHUB_STEP_SUMMARY"):
+        Path(summary_path).write_text(output_table)
     return status
 
 
