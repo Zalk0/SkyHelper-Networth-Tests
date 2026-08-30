@@ -10,6 +10,7 @@ NODE_DIRECTORY = Path(__file__).parent.joinpath("result_node")
 def main() -> int:
     status = 0
     output_table = "|MC UUID_Profile UUID|Python|Node|Unsoulbound Python|Unsoulbound Node|Same result|\n"
+    output_table += "|---|---|---|---|---|---|\n"
     for file in PYTHON_DIRECTORY.iterdir():
         same_result = True
         python_calc = json.loads(file.read_bytes())
