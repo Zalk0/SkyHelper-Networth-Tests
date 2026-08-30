@@ -8,9 +8,7 @@ original Node.js module. Order to run scripts:
 2. `calculate_node.js` and `calculate_python.py` (in any order)
 3. `check_results.py`
 
-It will round the results to 2 decimals and check if it's the same otherwise it will print file name
-and the Python and Node.js result. It checks regular networth and unsoulbound networth.
-
-It assumes that [SkyHelper-Networth](https://github.com/Altpapier/SkyHelper-Networth)
-and [SkyHelper-Networth-Python](https://codeberg.org/Zalko/SkyHelper-Networth-Python) are in the
-same folder itself.
+It will round the results to 2 decimals and check if it's the same.
+It checks regular networth and unsoulbound networth.
+The last script will output a Markdown table in the console
+and in the GitHub Actions Summary if run in CI.
