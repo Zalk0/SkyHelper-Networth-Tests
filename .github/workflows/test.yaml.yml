@@ -1,0 +1,28 @@
+name: Test
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10.0.1
+
+      - name: Calculate networth in JavaScript
+        run: |
+          npm i
+          node calculate_node.js
+
+      - name: Calculate networth in Python
+        run: |
+          uv sync
+          uv run calculate_python.py
+
+      - name: Check results
+        run: uv run check_results.py
