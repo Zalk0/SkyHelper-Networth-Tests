@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "skyhelper-networth": "file:../SkyHelper-Networth"
+    "skyhelper-networth": "2.10.0"
   }
 }

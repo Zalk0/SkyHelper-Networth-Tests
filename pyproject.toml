@@ -4,8 +4,5 @@ version = "0.1.0"
 requires-python = ">=3.13"
 dependencies = [
     "aiohttp",
-    "skyhelper-networth",
+    "skyhelper-networth==0.0.4",
 ]
-
-[tool.uv.sources]
-skyhelper-networth = { path = "../SkyHelper-Networth-Python", editable = true }
